@@ -4,8 +4,8 @@ import { useDataContext } from "../App";
 
 function Task(props) {
 	const { removeTaskById } = useDataContext();
-	const [title, setTitle] = useState(props.title);
-	const [description, setDescription] = useState(props.description);
+	const [title] = useState(props.title);
+	const [description] = useState(props.description);
 	const [color, setColor] = useState("bg-white");
 	const [isEditMode, setIsEditMode] = useState(props.editMode);
 

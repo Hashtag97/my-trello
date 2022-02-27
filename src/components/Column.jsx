@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Task from "./Task";
 import TextInput from "./TextInput";
-import { Draggable, Droppable } from "react-beautiful-dnd";
+import { Draggable } from "react-beautiful-dnd";
 import { useDataContext } from "../App";
 
 function Column(props) {
   const { data, removeById, addTask } = useDataContext();
-  const [title, setTitle] = useState(props.title);
+  const [title] = useState(props.title);
 
   return (
     <Draggable draggableId={props.id} index={props.index}>
